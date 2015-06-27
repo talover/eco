@@ -1,0 +1,64 @@
+@font-face {
+	font-family:'Ahellya-Regular';
+	src: url('fonts/Ahellya_gdi.eot');
+	src: url('fonts/Ahellya_gdi.eot?#iefix') format('embedded-opentype'),
+		url('fonts/Ahellya_gdi.woff') format('woff'),
+		url('fonts/Ahellya_gdi.ttf') format('truetype'),
+		url('fonts/Ahellya_gdi.svg#Ahellya-Regular') format('svg');
+	font-weight: 400;
+	font-style: normal;
+	font-stretch: normal;
+	unicode-range: U+000D-2122;
+}
+
+@font-face {
+	font-family:'ModernH-Medium';
+	src: url('fonts/ModernH-Medium_gdi.eot');
+	src: url('fonts/ModernH-Medium_gdi.eot?#iefix') format('embedded-opentype'),
+		url('fonts/ModernH-Medium_gdi.woff') format('woff'),
+		url('fonts/ModernH-Medium_gdi.ttf') format('truetype'),
+		url('fonts/ModernH-Medium_gdi.svg#ModernH-Medium') format('svg');
+	font-weight: 400;
+	font-style: normal;
+	font-stretch: normal;
+	unicode-range: U+000D-2122;
+}
+
+@font-face {
+	font-family:'ModernH-Light';
+	src: url('fonts/ModernH-Light_gdi.eot');
+	src: url('fonts/ModernH-Light_gdi.eot?#iefix') format('embedded-opentype'),
+		url('fonts/ModernH-Light_gdi.woff') format('woff'),
+		url('fonts/ModernH-Light_gdi.ttf') format('truetype'),
+		url('fonts/ModernH-Light_gdi.svg#ModernH-Light') format('svg');
+	font-weight: 400;
+	font-style: normal;
+	font-stretch: normal;
+	unicode-range: U+000D-2122;
+}
+
+@font-face {
+	font-family:'ModernH-EcoLight';
+	src: url('fonts/ModernH-EcoLight_gdi.eot');
+	src: url('fonts/ModernH-EcoLight_gdi.eot?#iefix') format('embedded-opentype'),
+		url('fonts/ModernH-EcoLight_gdi.woff') format('woff'),
+		url('fonts/ModernH-EcoLight_gdi.ttf') format('truetype'),
+		url('fonts/ModernH-EcoLight_gdi.svg#ModernH-EcoLight') format('svg');
+	font-weight: 400;
+	font-style: normal;
+	font-stretch: normal;
+	unicode-range: U+000D-2122;
+}fonts/
+
+@font-face {
+	font-family:'ModernH-Bold';
+	src: url('fonts/ModernH-Bold_gdi.eot');
+	src: url('fonts/ModernH-Bold_gdi.eot?#iefix') format('embedded-opentype'),
+		url('fonts/ModernH-Bold_gdi.woff') format('woff'),
+		url('fonts/ModernH-Bold_gdi.ttf') format('truetype'),
+		url('fonts/ModernH-Bold_gdi.svg#ModernH-Bold') format('svg');
+	font-weight: 400;
+	font-style: normal;
+	font-stretch: normal;
+	unicode-range: U+000D-2122;
+}

@@ -1,0 +1,692 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> 
+<html class="no-js" lang="en"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <title>test</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <script type="text/javascript" src="js/vendor/fontsmoothie.min.js" async></script>
+
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+    <script>
+      function initialize() {
+        var mapOptions = {
+          zoom: 15,
+          mapTypeId: google.maps.MapTypeId.TERRAIN,
+          scrollwheel: false,
+          center: {lat:49.812595, lng: 24.009891}
+        };
+
+        var bermudaTriangle;
+
+        var map = new google.maps.Map(document.getElementById('map-canvas'),
+            mapOptions);
+
+        // ico 
+        var image = 'img/imgo.png';
+        var myLatLng = new google.maps.LatLng(49.81031, 24.009);
+        var beachMarker = new google.maps.Marker({
+            position: myLatLng,
+            map: map,
+            icon: image
+        });
+
+        // Define the LatLng coordinates for the polygon's path.
+        var triangleCoords = [
+          new google.maps.LatLng(49.8124147836337, 24.01136040687561),
+          new google.maps.LatLng(49.812366320971805, 24.012417197227478),
+          new google.maps.LatLng(49.81186438340525, 24.012503027915955),
+          new google.maps.LatLng(49.81172245528719, 24.01237964630127),
+          new google.maps.LatLng(49.81187130671745, 24.01136040687561),
+          new google.maps.LatLng(49.81234208962267, 24.00983154773712),
+          new google.maps.LatLng(49.81280594477094, 24.00984764099121),
+          new google.maps.LatLng(49.81276094409308, 24.010502099990845),
+          new google.maps.LatLng(49.812560171328215, 24.01136040687561),
+
+        ];
+
+        // Construct the polygon.
+        bermudaTriangle = new google.maps.Polygon({
+          paths: triangleCoords,
+          strokeColor: '#fff',
+          strokeOpacity: 1,
+          strokeWeight: 2,
+          fillColor: '#009834',
+          fillOpacity: 1,
+        });
+
+        bermudaTriangle.setMap(map);
+      }
+
+
+      google.maps.event.addDomListener(window, 'load', initialize);
+
+    </script>
+<!-- 
+    <link rel="stylesheet/less" type="text/css" href="css/main.less">
+    <script src="js/vendor/less.js" type="text/javascript"></script>
+ -->
+    <!--[if lt IE 9]>
+        <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <script>window.html5 || document.write('<script src="js/vendor/html5shiv.js"><\/script>')</script>
+    <![endif]-->
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <div id="main">
+      <header id="header">
+        <div class="main-container">
+          <nav id="mob-menu">
+            <ul>
+              <li><a href="#main" class="anchorLink">ГОЛОВНА</a></li>
+              <li><a href="#preferences" class="anchorLink">ПЕРЕВАГИ</a></li>
+              <li><a href="#tab-wrap" class="anchorLink">КОТЕДЖІ</a></li>
+              <li><a href="#map-wrap" class="anchorLink">КАРТА</a></li>
+              <li><a href="#contacts" class="anchorLink">КОНТАКТИ</a></li>
+              <li><a href="#" class="logo-eko"><img src="img/logoeko.png" alt=""></a></li>
+              <li class="header-phon"><span class="icon-phon"></span>(032) 242 27 70</li>
+            </ul>
+          </nav>
+          <a href="#mob-menu" class="menu-btn"><span></span></a>
+          <a href="#" class="logo"></a>
+
+          <nav class="menu">
+            <ul>
+              <li><a href="#main" class="anchorLink">ГОЛОВНА</a></li>
+              <li><a href="#preferences" class="anchorLink">ПЕРЕВАГИ</a></li>
+              <li><a href="#tab-wrap" class="anchorLink">КОТЕДЖІ</a></li>
+              <li><a href="#map-wrap" class="anchorLink">КАРТА</a></li>
+              <li><a href="#contacts" class="anchorLink">КОНТАКТИ</a></li>
+              <li><a href="#" class="logo-eko"><img src="img/logoeko.png" alt=""></a></li>
+              <li class="header-phon"><span class="icon-phon"></span>(032) 242 27 70</li>
+            </ul>
+          </nav>
+        </div>
+      </header><!--END #header-->
+
+      <div class="slider-container">
+        <div class="main-gallery">
+          <div class="gallery-cell">
+            <div class="img-block">
+              <img src="img/top_slaider_01.jpg" alt="">
+            </div>
+
+            <div class="phon-block bounceInRight">
+              <span class="icon-phon-big"></span>
+              <div class="text-container form-wrap">
+                <input type="text" placeholder="+3809..." name="cb_tel" required>
+                <a href="#" class="btn btn-orange send-form">ЗАМОВИТИ ДЗВІНОК</a>
+              </div>
+            </div>
+
+            <h4 class="town bounceInRight">ЕЛIТНЕ КОТЕДЖНЕ <br> МІСТЕЧКО у ЛЬВОВІ</h4>
+
+          </div>
+          <div class="gallery-cell">
+            <div class="img-block">
+              <img src="img/top_slaider_02.jpg" alt="">
+            </div>
+            
+            <div class="phon-block bounceInRight">
+              <span class="icon-phon-big"></span>
+              <div class="text-container form-wrap">
+                <input type="text" placeholder="+3809..." name="cb_tel" required>
+                <a href="#" class="btn btn-orange send-form animate-btn">ЗАМОВИТИ ДЗВІНОК</a>
+              </div>
+            </div>
+
+            <h4 class="town bounceInRight">ЕЛIТНЕ КОТЕДЖНЕ <br> МІСТЕЧКО у ЛЬВОВІ</h4>
+          </div>
+          <div class="gallery-cell">
+            <div class="img-block">
+              <img src="img/top_slaider_03.jpg" alt="">
+            </div>
+            
+            <div class="phon-block bounceInRight">
+              <span class="icon-phon-big"></span>
+              <div class="text-container form-wrap">
+                <input type="text" placeholder="+3809..." name="cb_tel" required>
+                <a href="#" class="btn btn-orange send-form">ЗАМОВИТИ ДЗВІНОК</a>
+              </div>
+            </div>
+
+            <h4 class="town bounceInRight">ЕЛIТНЕ КОТЕДЖНЕ <br> МІСТЕЧКО у ЛЬВОВІ</h4>
+          </div>
+        </div>
+      </div><!--END .slider-container-->
+
+      <div class="main-container" id="preferences">
+        <h3 class="title-black">ПЕРЕВАГИ МІСТЕЧКА “ПАРКОВЕ”</h3>
+        <div class="preferences-list">
+          <ul class="clearfix">
+            <li class="preferences-1">
+              <figure class="img-block">
+                <img src="img/icon-1.png" alt="">
+              </figure>
+              <div class="text-block">
+                <h4>Найкраща екологія</h4>
+                <p>тиха затишна зона поряд з парком</p>
+              </div>
+            </li>
+          
+            <li class="preferences-2">
+              <figure class="img-block">
+                <img src="img/icon-2.png" alt="">
+              </figure>
+              <div class="text-block">
+                <h4>Зручне місце розташування</h4>
+                <p>до будь якої точки Львова максимально 30хв.</p>
+              </div>
+            </li>
+          
+            <li class="preferences-3">
+              <figure class="img-block">
+                <img src="img/icon-3.png" alt="">
+              </figure>
+              <div class="text-block">
+                <h4>Безпека на високому рівні</h4>
+                <p>закритий комплекс із охороною</p>
+              </div>
+            </li>
+          
+            <li class="preferences-4">
+              <figure class="img-block">
+                <img src="img/icon-4.png" alt="">
+              </figure>
+              <div class="text-block">
+                <h4>Здоровий спосіб життя</h4>
+                <p>поряд спортивний комплекс</p>
+              </div>
+            </li>
+          
+            <li class="preferences-5">
+              <figure class="img-block">
+                <img src="img/icon-5.png" alt="">
+              </figure>
+              <div class="text-block">
+                <h4>Комфорт заміського життя</h4>
+                <p>центральне водопостачання та водовідведення</p>
+              </div>
+            </li>
+          
+            <li class="preferences-6">
+              <figure class="img-block">
+                <img src="img/icon-6.png" alt="">
+              </figure>
+              <div class="text-block">
+                <h4>Дитячий майданчик</h4>
+                <p>на території містечка є дитячий майданчик</p>
+              </div>
+            </li>
+          </ul>
+        </div><!--END .preferences-list-->
+      </div><!--END #preferences-->
+
+      <div id='tab-wrap'>
+        <div class="tab-menu">
+          <div class="main-container">
+            <h3 class="title-tabs">КОТЕДЖІ:</h3>
+
+            <ul class="tab-list">
+              <li>
+                <a href="tab-1.html" data-tab="sub-tab-1.html" class="active">
+                  <span class="point"><i></i></span>Типу А
+                </a>
+              </li>
+              <li>
+                <a href="tab-2.html" data-tab="sub-tab-1.html">
+                  <span class="point"><i></i></span>Типу Б
+                </a>
+              </li>
+              <li>
+                <a href="tab-3.html" data-tab="sub-tab-1.html">
+                  <span class="point"><i></i></span>Типу В
+                </a>
+              </li>
+              <li>
+                <a href="tab-4.html" data-tab="sub-tab-1.html">
+                  <span class="point"><i></i></span>Типу Г
+                </a>
+              </li>
+            </ul>
+
+            <a href="#" class="review"><span class="arrow"></span><div class="text-block">переглянути <br> квартири</div></a>
+          </div>
+        </div>
+
+        <div id="ajax-content">This is default text, which will be replaced</div>
+      </div><!--END #tab-wrap-->
+
+      <div id="map-wrap">
+        <h4 class="address">м Львів, вул Янева, 10 (бічна В. Великого)</h4>
+
+        <div class="main-container">
+          <div class="map">
+<!--             <iframe width="100%" height="320"  frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps/ms?msa=0&amp;msid=210850459827034041141.0004cc788b541164a68ee&amp;ie=UTF8&amp;t=m&amp;ll=49.812595,24.009891&amp;spn=0.009194,0.028496&amp;z=15&amp;output=embed"></iframe> -->
+
+            <div id="map-canvas"></div>
+
+          </div><!--END .map-->
+
+          <div class="distance">
+            <ul>
+              <li class="distance-block-1">
+                <div class="img-block">
+                  <img src="img/icon-7.png" alt="">
+                </div>
+                <div class="text-block">
+                  <h4>До центру – 11 хв.</h4>
+                  <p>4,8 км. <br>11 хв. авто.</p>
+                </div>
+              </li>
+
+              <li class="distance-block-2">
+                <div class="img-block">
+                  <img src="img/icon-12.png" alt="">
+                </div>
+                <div class="text-block">
+                  <h4>До аеропорту – 13 хв.</h4>
+                  <p>5,5 км. <br>13 хв. авто.</p>
+                </div>
+              </li>
+              
+              <li class="distance-block-3">
+                <div class="img-block">
+                  <img src="img/icon-8.png" alt="">
+                </div>
+                <div class="text-block">
+                  <h4>До парку – 1 хв.</h4>
+                  <p>Горіховий гай – межує <br>Стрийський 3км, 7хв авто</p>
+                </div>
+              </li>
+              
+              <li  class="distance-block-4">
+                <div class="img-block">
+                  <img src="img/icon-13.png" alt="">
+                </div>
+                <div class="text-block">
+                  <h4>До залізничного вокзалу – 16 хв.</h4>
+                  <p>6,5 км. <br>16 хв. авто.</p>
+                </div>
+              </li>
+              
+              <li  class="distance-block-5">
+                <div class="img-block">
+                  <img src="img/icon-9.png" alt="">
+                </div>
+                <div class="text-block">
+                  <h4>До школи – 4 хв.</h4>
+                  <p>1 км. <br>4 хв. авто.</p>
+                </div>
+              </li>
+              
+              <li  class="distance-block-6">
+                <div class="img-block">
+                  <img src="img/icon-14.png" alt="">
+                </div>
+                <div class="text-block">
+                  <h4>До цспорткомплексу "Динамо" – 1 хв.</h4>
+                  <p>межує</p>
+                </div>
+              </li>
+              
+              <li  class="distance-block-7">
+                <div class="img-block">
+                  <img src="img/icon-10.png" alt="">
+                </div>
+                <div class="text-block">
+                  <h4>До садочку – 4 хв.</h4>
+                  <p>1 км. <br>4 хв. авто.</p>
+                </div>
+              </li>
+              
+              <li class="distance-block-8">
+                <div class="img-block">
+                  <img src="img/icon-15.png" alt="">
+                </div>
+                <div class="text-block">
+                  <h4>До торгівельних центрів – 4 хв.</h4>
+                  <p>
+                    Ашан: 5,1км - 1хв; Новий Цум: 1,7км - 4хв; <br>
+                    Пывденний: 3,1км - 8хв.
+                  </p>
+                </div>
+              </li>
+              
+              <li  class="distance-block-9">
+                <div class="img-block">
+                  <img src="img/icon-11.png" alt="">
+                </div>
+                <div class="text-block">
+                  <h4>До поліклініки – 4 хв.</h4>
+                  <p>1 км. <br>4 хв. авто.</p>
+                </div>
+              </li>
+              
+              <li class="distance-block-10">
+                <div class="img-block">
+                  <img src="img/icon-16.png" alt="">
+                </div>
+                <div class="text-block">
+                  <h4>До розважальних центрів – 5 хв.</h4>
+                  <p>Аквапарк 1,9км - 5хв</p>
+                  <p>Мі100 2,1км - 6хв</p>
+                </div>
+              </li>
+            </ul>
+          </div><!--END .distance-->
+        </div>
+      </div><!--END #map-wrap-->
+
+      <div class="gray">
+        <div class="main-container">
+          <div class="request-form">
+            <div class="row">
+              <h4>
+                Потрібні деталі по плануванню – ЗАЛИШІТЬ Ваш email
+                і ми надішлемо матеріали поштою.
+              </h4>
+              <span class="icon-arrow orange-arrow"></span>
+              <span class="icon-mail"></span>
+            </div>
+          
+            <div class="row form-wrap">
+              <div class="input-container">
+                <input type="text" placeholder="Як до Вас звертатись..?" name="cb_name" required>
+              </div>
+          
+              <div class="input-container">
+                <input type="text" placeholder="email@abc.ua" name="cb_mail" required>
+              </div>
+          
+              <button class="btn btn-orange send-form animate-btn">ОТРИМАТИ ПЛАНУВАННЯ</button>
+            </div>
+          </div><!--END .request-form-->
+        </div>
+      </div>
+
+      <h4 class="grey-title">зручно, безпечно, приватно</h4>
+      <div class="security" style="background-image:url('img/security.jpg')">
+        <div class="main-container">
+          <a href="#" class="logo-security">
+            <img src="img/logo-security.png" alt="">
+          </a>
+
+          <div class="security-block">
+            <img src="img/security.png" alt="">
+
+            <div class="item-wrap security-1">
+
+              <div class="img-block">
+                <img src="img/icon-21.png" alt="">
+              </div>
+
+              <div class="text-block">
+                <p>Закрита територія</p>
+              </div>
+            </div>
+
+            <div class="item-wrap security-2">
+
+              <div class="img-block">
+                <img src="img/icon-22.png" alt="">
+              </div>
+
+              <div class="text-block">
+                <p>Контрольований <br> в’їзд та виїзд</p>
+              </div>
+            </div>
+
+            <div class="item-wrap security-3">
+
+              <div class="img-block">
+                <img src="img/icon-23.png" alt="">
+              </div>
+
+              <div class="text-block">
+                <p>Цілодобовий нагляд <br> (охоронець)</p>
+              </div>
+            </div>
+
+            <div class="item-wrap security-4">
+
+              <div class="img-block">
+                <img src="img/icon-24.png" alt="">
+              </div>
+
+              <div class="text-block">
+                <p>Відеодомофон з фунцією <br> конс’єржа</p>
+              </div>
+            </div>
+
+            <div class="item-wrap security-5">
+
+              <div class="img-block">
+                <img src="img/icon-25.png" alt="">
+              </div>
+
+              <div class="text-block">
+                <p>Гараж та криті стоянки <br> для вашого авто</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="banner" style="background-image:url('img/banner.jpg')">
+        <div class="main-container clearfix">
+          <div class="text-block">
+            <h4>
+              <span>63</span> м<sup>2</sup> <br>
+              у подарунок
+            </h4>
+            <p>при купывлы котеджу до 25.06.2015</p>
+          </div>
+          
+          <figure class="img-block gift">
+            <img src="img/gift.png" alt="">
+          </figure>
+        </div>
+      </div>
+
+      <div class="blue">
+        <div class="main-container">
+          <div class="request-form">
+            <div class="row">
+              <h4>
+                Залишіть свої  контаки <br>
+                і ми розповімо Вам про умови пропозиції
+              </h4>
+              <span class="icon-arrow white-arrow"></span>
+              <span class="icon-phon-big"></span>
+            </div>
+          
+            <div class="row form-wrap">
+              <div class="input-container">
+                <input type="text" placeholder="Як до Вас звертатись?" name="cb_name" required>
+              </div>
+          
+              <div class="input-container">
+                <input type="text" placeholder="+3809..." name="cb_tel" required>
+              </div>
+          
+              <button class="btn btn-orange send-form animate-btn">ДІЗНАТИСЬ ДЕТАЛІ</button>
+            </div>
+          </div><!--END .request-form-->
+        </div>
+      </div>
+
+      <div class="slider-container">
+        <div class="main-gallery">
+          <div class="gallery-cell">
+            <div class="img-block">
+              <img src="img/pic-6.jpg" alt="">
+            </div>
+
+            <div class="comfort bounceInRight">
+              <h4>ПРИВАТНІСТЬ та КОМФОРТ <br> ЗАМІСЬКОГО ЖИТТЯ <br> у ЦЕНТРІ ЛЬВОВА</h4>
+            </div>
+          </div>
+
+          <div class="gallery-cell">
+            <div class="img-block">
+              <img src="img/pic-7.jpg" alt="">
+            </div>
+
+            <div class="logo-slider bounceInLeft">
+              <img src="img/logo-slider.png" alt="">
+            </div>
+
+            <div class="sport bounceInLeft">
+              <h4>МЕЖУЄ ІЗ СПОРТИВНИМ <br> КОМПЛЕКСОМ "ДИНАМО"</h4>
+              <p>
+                парк <br>
+                тенісні корти <br>
+                футбольне поле <br>
+                бігові доріжки <br>
+                лучне стрідьбище <br>
+                стрілецький тир
+              </p>
+              <h5>
+                СПОРТ - СКЛАДОВА РИТМУ <br>
+                УСПІШНИХ ЛЮДЕЙ
+              </h5>
+            </div>
+          </div>
+
+          <div class="gallery-cell">
+            <div class="img-block">
+              <img src="img/pic-8.jpg" alt="">
+            </div>
+
+            <div class="logo-slider bounceInLeft">
+              <img src="img/logo-slider.png" alt="">
+            </div>
+
+            <div class="comfort slide-1 bounceInRight">
+              <h4>ЦЕ ВЛАСНЕ ПОДВІР'Я <br> у м. ЛЬВОВІ</h4>
+            </div>
+          </div>
+
+          <div class="gallery-cell">
+            <div class="img-block">
+              <img src="img/pic-9.jpg" alt="">
+            </div>
+
+            <div class="logo-slider slide-2 bounceInLeft">
+              <img src="img/logo-slider.png" alt="">
+            </div>
+
+            <div class="cosiness bounceInLeft">
+              <h4>ЦЕ ІНШИЙ РІВЕНЬ <br> ЗАТИШКУ ВАШОЇ <br> ОСЕЛІ</h4>
+            </div>
+          </div>
+        </div>
+      </div><!--END .slider-container-->
+
+      <div class="about-company" style="background-image:url('img/about.png')">
+        <div class="main-container">
+          <div class="purchase-benefits purchase-animated">
+            <h4>ПРО КОМПАНІЮ</h4>
+            <p>Переваги купівлі житла у нас:</p>
+            <ul>
+              <li>10 років на ринку</li>
+              <li>Спеціалізуємось на елітній <br> нерухомості</li>
+              <li>Будуємо в мальовничих <br> куточках центру міста</li>
+              <li>Якість вища за ціну</li>
+              <li>Індивідуальні проєктні <br> рішення для кожного…</li>
+            </ul>
+          </div>
+
+          <a href="#" class="logo-about logo-animated">
+            <img src="img/logo-about.png" alt="">
+          </a>
+        </div>
+      </div>
+
+      <div class="contacts main-container clearfix" id="contacts">
+        <div class="comany-contact">
+          <h4>КОНТАКТИ</h4>
+          <p>Відділ продажу:</p>
+
+          <p>
+            79008, Укрїна м.Львів <br>
+            пл. Данила Галицького 12/2
+          </p>
+
+          <p>
+            +38(032) 242 27 70 <br>
+            +38(032) 242 27 70
+          </p>
+        </div>
+        
+        <div class="contact-img">
+          <img src="img/photo.jpg" alt="">
+        </div>
+
+        <div class="contact-form">
+          <h4>СЕРГІЙ</h4>
+          <p>керівник відділу продажу:</p>
+
+          <p><b>“</b>Ваше житло буде об’єктом нашої <br> та Вашої гордості…<b>”</b></p>
+
+          <div class="text-block">
+            <span class="phon-green"></span>
+
+            <div class="input-block form-wrap">
+              <div class="input-container">
+                <input type="text" placeholder="Як до Вас звертатись?" name="cb_name" required>
+              </div>
+              <div class="input-container">
+                <input type="text" placeholder="+3809..." name="cb_tel" required>
+              </div>
+              <button class="btn btn-green send-form animate-btn" >ЗАМОВИТИ ДЗВІНОК</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer id="footer">
+      <div class="main-container">
+        <a href="#" class="logo-footer">
+          <img src="img/logo-footer.png" alt="">
+        </a>
+
+        <div class="copy-lang">
+          <p>Агенство нерухомості "Екополіс" 2015р.</p>
+        </div>
+      </div>
+    </footer>
+
+    <div class="hidden-popups">
+      <div class="white-popup">
+        <h2>Дякуємо!</h2>
+        <p>
+          Ми зв'яжемося з Вами найближчим часом.
+        </p>
+      </div>
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
+    <script type="text/javascript" src="js/vendor/jquery.mmenu.min.all.js"></script>
+    <script src="js/vendor/flickity.pkgd.min.js"></script>
+    <script src="js/vendor/jquery.magnific-popup.min.js"></script>
+    <script src="js/vendor/owl.carousel.min.js"></script>
+    
+    <script src="js/main.js"></script>
+
+  </body>
+</html>
